@@ -1,0 +1,236 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="">
+
+
+    <style>
+
+body{
+    margin: 0;
+    padding: 0;
+    background: url(https://lh3.googleusercontent.com/sA5iQMNx5X3Us104Na5vefIRYYc4X0qKxw0TKopuA_6ZFB2AGj9T58-KCHqaimeYHjosXsuVoqyAyima0Bmg3RHiPddRDCJo0_dGAOPh_lN8ZSrWw4LLNGGxRjBxMBXB-s7TpEEf=s225-p-k);
+    background-size: 150px;
+    margin-top: 7.5%;
+    background-position: ;
+    background-repeat: no-repeat;
+    font-family: 'Poppins' sans-serif;
+    
+}
+.loginbox{
+
+    width: 320px;
+    height: 420px;
+    background: rgb(83, 83, 85);
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+    
+}
+.avatar{
+    width: 100px;;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+    left: calc(50% - 70px);
+}
+h1{
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
+}
+.loginbox p{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+
+}
+.loginbox input{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.loginbox input[type="text"], input[type="password"]
+{  
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+
+}
+
+.loginbox input[type="submit"]
+{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.473);
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+
+}
+.loginbox input[type="submit"]:hover
+{
+    cursor: pointer;
+    background: #f6f4ee;
+    color: #000;
+}
+.loginbox a{
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 20px;
+    color: darkgray;
+}
+
+.loginbox a:hover
+{
+    color: darkgoldenrod;
+}
+
+.popup{
+    width: 400px;
+    background: #fff;
+    border-radius: 6px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.1);  
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #333;
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+ }
+ .open-popup{
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%,-50%) scale(1); 
+    
+ 
+ }
+ .popup img{
+    width: 100px;
+    margin-top: -50px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0,0, 0, 0.2);
+ }
+ .popup h2{
+    font-size: 38px;
+    font-weight: 500;
+    margin: 30px 0 10px;
+ 
+ }
+ 
+ .popup button{
+    width: 100%;
+    margin-top: 50px;
+    padding: 10px 0;
+    background: #6fd649;
+    color: #fff;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0, 0, 0.2);
+ 
+ 
+ }
+ h5{
+    text-align: center;
+    
+ }
+
+    
+
+    
+
+
+    </style>
+
+  
+     <script>
+
+        
+
+        function myfunction()
+        {
+            var un = document.forms["myform"]["Uname"].value;
+            var pw = document.forms["myform"]["Pass"].value;
+            if( un=="Elizabeth" && pw=="HandlebyEric@1")
+            { window.location.assign("Dashboard.php");
+            
+                alert("Login Sucess")}
+            else
+            {
+            alert("invalid Username and Password");
+            return;
+            }
+
+           
+            
+
+
+
+
+
+
+        }
+        
+
+
+    </script>
+</head>
+<body>
+
+   <div class="loginbox" id="4">
+
+        
+        <img src="https://lh3.googleusercontent.com/hct1cv6nRvBxwwx_GdyG1a6m8c6X835UCFUFMxe3EpDJ_JQM30OSi_EMivm0oCQvWC-DJHeZTSIuxk3lZxXWsnkR0sD3PPNdjJ1AAwAXWvBU0hBthTxWEoA7eV1rxVOl3PiE5trb=s225-p-k" alt="" class="avatar">
+        <h1>Login Here </h1>
+        
+        <form name="myform" method="post" > 
+            <p>Username</p>
+            <input type="text" name="Uname" placeholder="Enter Username">
+            <p>Password</p>
+            <input type="password" name="Pass" placeholder="Enter Password">
+            <input type="submit" name="log" id="logbutton" value="Log in" onclick="myfunction()">
+            <a href="#"><b>  Terms </b>  </a><br>
+            <a href="#"><b>  Privacy</b>  </a> <br>
+            <a href=""> <b> Security </b> </a>
+        </form>
+        
+        
+
+    </div>
+
+
+
+    
+
+        
+
+    
+
+    
+</body>
+</html>
